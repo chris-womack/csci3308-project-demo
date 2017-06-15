@@ -1,12 +1,11 @@
 {
-  "_comment": "The composer.json file specifies the dependencies that should be installed with your application. When an app is deployed, Heroku reads this file and installs the appropriate dependencies into the vendor directory. `composer update` will update dependencies ",
-  "require": {
-    "silex/silex": "^2.0.4",
-    "monolog/monolog": "^1.22",
-    "twig/twig": "^2.0",
-    "symfony/twig-bridge": "^3"
-  },
-  "require-dev": {
-    "heroku/heroku-buildpack-php": "*"
-  }
+	"require": {
+		"silex/silex": "^2.0.4",
+		"monolog/monolog": "^1.22",
+		"twig/twig": "^2.0",
+		"symfony/twig-bridge": "^3"
+	},
+	"require-dev": {
+		"heroku/heroku-buildpack-php": "*"
+	}
 }
