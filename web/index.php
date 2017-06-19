@@ -48,7 +48,7 @@ if ($_POST['submitbutton'])
     <title>geogram</title>
 </head>
 <body>
-<form action="#" method="post">
+<form action="index.php" method="post">
     Location: <input type="text" name="location"/>
     <input type="submit" name="submitbutton" value="Submit"/>
     <br>
