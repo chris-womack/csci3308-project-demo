@@ -25,7 +25,7 @@ if ($_GET['location'])
 
     echo 'Latitude: '.$lat;
     echo "<br>";
-    echo 'Longitude'.$lng;
+    echo 'Longitude: '.$lng;
     echo "<br>";
 
     /**
@@ -34,9 +34,9 @@ if ($_GET['location'])
      */
     $weather_url =
         'http://api.openweathermap.org/data/2.5/forecast' .
-        '?lat=' . $lat .
-        '&lng=' . $lng .
-        '&client_id=812c81cd96b946c7a36d14d3373e85cc'; //replace "CLIENT-ID"
+        '?lat='.$lat.
+        '&lng='.$lng.
+        '&APPID=b6b9501f4b9d07e94ddaf093c41feeef'; //replace "CLIENT-ID"
 
     // get the json from the api call
     $weather_json = file_get_contents($weather_url);
