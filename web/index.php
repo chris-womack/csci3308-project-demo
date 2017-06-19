@@ -69,7 +69,7 @@ if ($_GET['location'])
     <?php
         if(!empty($weather_array))
         {
-            $sky = $weather_array['list'][0]['weather']['description'];
+            $sky = $weather_array['list'][0]['weather'][0]['description'];
             $temp = $weather_array['list'][0]['main']['temp'];
             $temp = k_to_f($temp);
             echo '<p> Temperature: '.$temp.'</p>';
