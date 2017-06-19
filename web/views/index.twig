@@ -102,17 +102,11 @@
                 <input type="text" name="location"/>
                 <button type="submit">Submit</button>
                 <br>
-                <?php
-                    if(!empty($instagram_array))
-                    {
-                        foreach($instagram_array['data'] as $image)
-                        {
-                            echo '<img src"'
-                            .$image['images']['low_resolution']['url'].'"
-                            alt=""/>';
-                        }
-                    }
-                ?>
+                {% if online == false %}
+                    {% for image in instagram_array %}
+                        <img src=".$image['images']['low_resolution']['url']" alt=""/>
+                    {% endfor %}
+                {% endif %}
             </form>
         </div>
         <div class="col-md-6"></div>
