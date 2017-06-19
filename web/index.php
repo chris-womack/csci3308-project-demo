@@ -42,7 +42,7 @@ function display()
     //}
 }
 
-if(isset($_GET['submit']))
+if(isset($_GET['location']))
 {
        display();
 }
@@ -54,9 +54,9 @@ if(isset($_GET['submit']))
     <title>geogram</title>
 </head>
 <body>
-<form action="" method="get">
+<form action="#" method="get">
     <input type="text" name="location"/>
-    <button type="submit" value="click" name="submit">Submit</button>
+    <button type="submit">Submit</button>
     <br>
     <?php
         echo $weather_array;
