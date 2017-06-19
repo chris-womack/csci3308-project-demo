@@ -67,12 +67,11 @@ if ($_GET['location'])
     <button type="submit">Submit</button>
     <br>
     <?php
-        echo $weather_array;
         if(!empty($weather_array))
         {
-            echo '<p>'.$weather_array['list']['main']['temp'].'</p>';
-            echo $weather_array['list'];
-            echo $weather_array['list'];
+            $temp = $weather_array['list'][0]['main']['temp'];
+            $temp = k_to_f($temp);
+            echo '<p>'.$temp.'</p>';
             echo '<br>';
         }
     ?>
