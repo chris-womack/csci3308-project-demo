@@ -46,15 +46,16 @@ if (!empty($_GET['location'])) {
     <title>geogram</title>
 </head>
 <body>
-<form action="<?php $_PHP_SELF ?>" method="GET">
+<form action="" method="GET">
     <input type="text" name="location"/>
     <button type="submit">Submit</button>
     <br>
     <?php
-        echo '<p>'.$weather_array.'</p>';
+        echo $weather_array;
         if(!empty($weather_array))
         {
             echo '<p>'.$weather_array['list']['main']['temp'].'</p>';
+            echo $weather_array;
             echo '<br>';
         }
     ?>
