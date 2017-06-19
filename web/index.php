@@ -57,7 +57,8 @@ if ($_POST['submitbutton'])
         if(!empty($weather_array))
         {
             echo '<p>'.$weather_array['list']['main']['temp'].'</p>';
-            echo $weather_array;
+            echo $weather_array['list'];
+            echo $weather_array['list'];
             echo '<br>';
         }
     ?>
