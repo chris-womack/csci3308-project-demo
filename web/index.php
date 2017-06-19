@@ -6,9 +6,10 @@ function k_to_f($temp) {
 
 if ($_GET['location'])
 {
-    /* connect to database 
+    /* connect to database */
     $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
+    echo "$url";
+    /*
     $server = $url["host"];
     $username = $url["user"];
     $password = $url["pass"];
