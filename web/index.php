@@ -46,10 +46,12 @@ if (!empty($_GET['location'])) {
     <title>geogram</title>
 </head>
 <body>
-<form action="" method="get">
+<form action="" method="GET">
     <input type="text" name="location"/>
     <button type="submit">Submit</button>
+    <br>
     <?php
+        echo '<img src="'.$weather_array['list']['main']['temp'].'" alt=""/>'; 
         if(!empty($weather_array))
         {
             echo '<img src="'.$weather_array['list']['main']['temp'].'" alt=""/>';
