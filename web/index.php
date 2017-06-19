@@ -1,5 +1,5 @@
 <?php
-if ($_POST['submitbutton'])
+if ($_GET['location'])
 {
     /**
      * Here we build the url we'll be using to access the google maps api
@@ -9,7 +9,7 @@ if ($_POST['submitbutton'])
         'https://' .
         'maps.googleapis.com/' .
         'maps/api/geocode/json' .
-        '?address=' . urlencode($_POST['location']);
+        '?address=' . urlencode($_GET['location']);
 
     /* Processes the "GET" request and returns json. Note there are other methods for this function
     * i.e. PUT POST
@@ -48,9 +48,9 @@ if ($_POST['submitbutton'])
     <title>geogram</title>
 </head>
 <body>
-<form action="index.php" method="post">
+<form action="" method="get">
     Location: <input type="text" name="location"/>
-    <input type="submit" name="submitbutton" value="Submit"/>
+    <button type="submit">Submit</button>
     <br>
     <?php
         echo $weather_array;
