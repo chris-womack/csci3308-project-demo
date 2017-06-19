@@ -6,7 +6,7 @@ function k_to_f($temp) {
 
 if ($_GET['location'])
 {
-    /* connect to database */
+    /* connect to database 
     $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
     $server = $url["host"];
@@ -18,7 +18,7 @@ if ($_GET['location'])
     or die("Unable to connect to Database");
 
     echo "$conn";
-    echo "<br>";
+    echo "<br>";*/
 
     /**
      * Here we build the url we'll be using to access the google maps api
