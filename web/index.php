@@ -15,13 +15,13 @@ if (!empty($_GET['location'])) {
      * Time to make our Instagram api request. We'll build the url using the
      * coordinate values returned by the google maps api
      */
-    $url = 'https://' .
+    $insta_url = 'https://' .
         'api.instagram.com/v1/media/search' .
         '?lat=' . $lat .
         '&lng=' . $lng .
         '&client_id=812c81cd96b946c7a36d14d3373e85cc'; //replace "CLIENT-ID"
-    $json = file_get_contents($url);
-    $array = json_decode($json, true);
+    $insta_json = file_get_contents($url);
+    $insta_array = json_decode($json, true);
 }
 ?>
 <!DOCTYPE html>
@@ -40,9 +40,11 @@ if (!empty($_GET['location'])) {
 <br/>
 <div id="results" data-url="<?php if (!empty($url)) echo $url ?>">
     <?php
-    if (!empty($array)) {
-        foreach ($array['data'] as $key => $item) {
-            echo '<img id="' . $item['id'] . '" src="' . $item['images']['low_resolution']['url'] . '" alt=""/><br/>';
+    if (!empty($insta_array)) {
+        foreach ($insta_array['data'] as $image) {
+            echo '<img src="'
+            .$image['images']['low_resolution']['url'].'"
+            alt=""/><br/>';
         }
     }
     ?>
