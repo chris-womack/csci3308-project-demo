@@ -1,4 +1,9 @@
 <?php
+function k_to_f($temp) {
+    if ( !is_numeric($temp) ) { return false; }
+    return round((($temp - 273.15) * 1.8) + 32);
+}
+
 if ($_GET['location'])
 {
     /**
@@ -41,13 +46,10 @@ if ($_GET['location'])
     // get the json from the api call
     $weather_json = file_get_contents($weather_url);
 
-    echo 'JSON: '.$weather_json;
-    echo "<br>";
-
     // convert json into array
     $weather_array = json_decode($weather_json, true);
 
-    $temp = $weather_array['list']['main']['temp'];
+    $temp = $weather_array['list'][0]['main']['temp'];
     echo 'Temperature: '.$temp;
     echo "<br>";
 }
