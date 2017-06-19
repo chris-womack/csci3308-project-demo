@@ -24,9 +24,9 @@ if ($_GET['location'])
     $lng = $maps_array['results'][0]['geometry']['location']['lng'];
 
     echo 'Latitude: '.$lat;
-    echo "\n";
+    echo "<br>";
     echo 'Longitude'.$lng;
-    echo "\n";
+    echo "<br>";
 
     /**
      * Time to make our Instagram api request. We'll build the url using the
@@ -46,7 +46,7 @@ if ($_GET['location'])
 
     $temp = $weather_array['list']['main']['temp'];
     echo 'Temperature: '.$temp;
-    echo "\n";
+    echo "<br>";
 }
 ?>
 
