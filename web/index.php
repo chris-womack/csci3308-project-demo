@@ -42,7 +42,7 @@ function display()
     //}
 }
 
-if(isset($_GET['location']))
+if(isset($_GET['submit']))
 {
        display();
 }
@@ -54,7 +54,7 @@ if(isset($_GET['location']))
     <title>geogram</title>
 </head>
 <body>
-<form action="?action=submitfunc" method="get">
+<form action="" method="get">
     <input type="text" name="location"/>
     <button type="submit" value="click" name="submit">Submit</button>
     <br>
