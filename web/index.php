@@ -14,18 +14,7 @@ if ($_GET['location'])
     $password = $url["pass"];
     $db = substr($url["path"], 1);
 
-    echo "$server";
-    echo "$username";
-    echo "$password";
-    echo "$db";
-
-    /*
-    $conn = new mysqli($server, $username, $password, $db)
-    or die("Unable to connect to Database");
-
-    echo "$conn";
-    echo "<br>";
-    */
+    $conn = new mysqli("$server", "$username", "$password", "$db");
     /**
      * Here we build the url we'll be using to access the google maps api
      * urlencode will encode any invalid characters that users input i.e. whitespace
