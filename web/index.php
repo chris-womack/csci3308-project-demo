@@ -1,8 +1,6 @@
 <?php
 if ($_GET['location'])
 {
-    echo "asdf";
-
     /**
      * Here we build the url we'll be using to access the google maps api
      * urlencode will encode any invalid characters that users input i.e. whitespace
@@ -24,10 +22,11 @@ if ($_GET['location'])
     // Lets get the lat and long for the instagram api
     $lat = $maps_array['results'][0]['geometry']['location']['lat'];
     $lng = $maps_array['results'][0]['geometry']['location']['lng'];
-    echo "asdf";
 
-    echo $lat;
-    echo $long;
+    echo 'Latitude: '.$lat;
+    echo "\n";
+    echo 'Longitude'.$lng;
+    echo "\n";
 
     /**
      * Time to make our Instagram api request. We'll build the url using the
@@ -44,6 +43,10 @@ if ($_GET['location'])
 
     // convert json into array
     $weather_array = json_decode($weather_json, true);
+
+    $temp = $weather_array['list']['main']['temp'];
+    echo 'Temperature: '.$temp;
+    echo "\n";
 }
 ?>
 
