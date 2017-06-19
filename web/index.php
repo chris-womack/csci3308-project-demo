@@ -35,13 +35,13 @@ if (!empty($_GET['location'])) {
     <input type="text" name="location"/>
     <button type="submit">Submit</button>
     <?php
-    if (!empty($insta_array)) {
+    //if (!empty($insta_array)) {
         foreach ($insta_array['data'] as $image) {
             echo '<img src="'
             .$image['images']['low_resolution']['url'].'"
             alt=""/><br/>';
         }
-    }
+    //}
     ?>
 </form>
 </body>
