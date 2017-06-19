@@ -101,6 +101,18 @@
                 <!-- setting the name to "location" associates the input with the _GET php array -->
                 <input type="text" name="location"/>
                 <button type="submit">Submit</button>
+                <br>
+                <?php
+                    if(!empty($instagram_array))
+                    {
+                        foreach($instagram_array['data'] as $image)
+                        {
+                            echo '<img src"'
+                            .$image['images']['low_resolution']['url'].'"
+                            alt=""/>';
+                        }
+                    }
+                ?>
             </form>
         </div>
         <div class="col-md-6"></div>

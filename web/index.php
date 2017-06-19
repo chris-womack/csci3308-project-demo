@@ -48,7 +48,6 @@ if(!empty(_GET['location']))
     $instagram_array = json_decode($json, true);
 }
 
-
 // Our web handlers
 $app->get('/', function() use($app) {
   $app['monolog']->addDebug('logging output.');
