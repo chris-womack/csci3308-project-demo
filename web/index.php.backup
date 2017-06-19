@@ -19,7 +19,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 // check if the input from the form is empty, if not store in _GET array
 if(!empty(_GET['location']))
 {
-    // url for the api, urlencode will encode any invalid characters that users input i.e. whitespace
+    // url for the  api, urlencode will encode any invalid characters that users input i.e. whitespace
     $map_url = 'https://'.
         'maps.googleapis.com/maps/api/geocode/json'. // google maps api interface
         '?address='. urlencode($_GET['location']); // query statement for the api

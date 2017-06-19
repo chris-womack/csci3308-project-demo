@@ -1,6 +1,8 @@
 <?php
 if ($_GET['location'])
 {
+    echo "asdf";
+
     /**
      * Here we build the url we'll be using to access the google maps api
      * urlencode will encode any invalid characters that users input i.e. whitespace
