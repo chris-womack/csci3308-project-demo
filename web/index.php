@@ -24,6 +24,10 @@ if ($_GET['location'])
     // Lets get the lat and long for the instagram api
     $lat = $maps_array['results'][0]['geometry']['location']['lat'];
     $lng = $maps_array['results'][0]['geometry']['location']['lng'];
+    echo "asdf";
+
+    echo $lat;
+    echo $long;
 
     /**
      * Time to make our Instagram api request. We'll build the url using the
