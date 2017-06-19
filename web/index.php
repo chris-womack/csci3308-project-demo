@@ -41,6 +41,9 @@ if ($_GET['location'])
     // get the json from the api call
     $weather_json = file_get_contents($weather_url);
 
+    echo 'JSON: '.$weather_json;
+    echo "<br>";
+
     // convert json into array
     $weather_array = json_decode($weather_json, true);
 
