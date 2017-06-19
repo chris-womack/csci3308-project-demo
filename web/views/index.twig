@@ -102,11 +102,9 @@
                 <input type="text" name="location"/>
                 <button type="submit">Submit</button>
                 <br>
-                {% if instagram_imgs %}
                     {% for image in instagram_imgs %}
                         <img src=".$image['images']['low_resolution']['url']" alt=""/>
                     {% endfor %}
-                {% endif %}
             </form>
         </div>
         <div class="col-md-6"></div>
