@@ -1,14 +1,4 @@
 <?php
-$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
-$server = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-$db = substr($url["path"], 1);
-
-$conn = new mysqli($server, $username, $password, $db)
-or die("Unable to connect to Database");
-
 function k_to_f($temp) {
     if ( !is_numeric($temp) ) { return false; }
     return round((($temp - 273.15) * 1.8) + 32);
@@ -16,6 +6,20 @@ function k_to_f($temp) {
 
 if ($_GET['location'])
 {
+    /* connect to database */
+    $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+    $server = $url["host"];
+    $username = $url["user"];
+    $password = $url["pass"];
+    $db = substr($url["path"], 1);
+
+    $conn = new mysqli($server, $username, $password, $db)
+    or die("Unable to connect to Database");
+
+    echo "$conn";
+    echo "<br>";
+
     /**
      * Here we build the url we'll be using to access the google maps api
      * urlencode will encode any invalid characters that users input i.e. whitespace
