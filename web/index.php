@@ -9,7 +9,7 @@ if ($_POST['submitbutton'])
         'https://' .
         'maps.googleapis.com/' .
         'maps/api/geocode/json' .
-        '?address=' . urlencode($_GET['location']);
+        '?address=' . urlencode($_POST['location']);
 
     /* Processes the "GET" request and returns json. Note there are other methods for this function
     * i.e. PUT POST
