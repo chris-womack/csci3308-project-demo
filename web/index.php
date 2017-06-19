@@ -27,17 +27,17 @@ if ($_POST['submitbutton'])
      * Time to make our Instagram api request. We'll build the url using the
      * coordinate values returned by the google maps api
      */
-    $insta_url =
+    $weather_url =
         'http://api.openweathermap.org/data/2.5/forecast' .
         '?lat=' . $lat .
         '&lng=' . $lng .
         '&client_id=812c81cd96b946c7a36d14d3373e85cc'; //replace "CLIENT-ID"
 
     // get the json from the api call
-    $weather_json = file_get_contents($url);
+    $weather_json = file_get_contents($weather_url);
 
     // convert json into array
-    $weather_array = json_decode($json, true);
+    $weather_array = json_decode($weather_json, true);
 }
 ?>
 
