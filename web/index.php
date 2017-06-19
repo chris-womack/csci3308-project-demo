@@ -51,10 +51,9 @@ if (!empty($_GET['location'])) {
     <button type="submit">Submit</button>
     <br>
     <?php
-        echo '<img src="'.$weather_array['list']['main']['temp'].'" alt=""/>';
         if(!empty($weather_array))
         {
-            echo '<img src="'.$weather_array['list']['main']['temp'].'" alt=""/>';
+            echo '<p>'.$weather_array['list']['main']['temp'].'</p>';
             echo '<br>';
         }
     ?>
