@@ -11,10 +11,10 @@ function itsAjaxTime() {
 function addNewImages(data) {
   $.each(data.data, function (index, image) {
         if ($('#' + image.id).length == 0) {
-          var $img = $('<img ' +
+          var img = $('<img ' +
                 'id="' + image.id +
                 '" src="' + image.images.low_resolution.url +
                 '" alt=""/><br/>');
-          $img.hide().prependTo('#results').fadeIn(2000);
+          img.hide().prependTo('#results').fadeIn(2000);
         } });
 }
