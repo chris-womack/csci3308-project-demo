@@ -1,4 +1,14 @@
 <?php
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+
+$conn = new mysqli($server, $username, $password, $db)
+or die("Unable to connect to Database");
+
 function k_to_f($temp) {
     if ( !is_numeric($temp) ) { return false; }
     return round((($temp - 273.15) * 1.8) + 32);
@@ -69,7 +79,7 @@ if ($_GET['location'])
     <?php
         if(!empty($weather_array))
         {
-            $sky = $weather_array['list'][0]['weather'][0]['description'];
+            $sky = $weather_array['list'][0]['weather'] [0]['description'];
             $temp = $weather_array['list'][0]['main']['temp'];
             $temp = k_to_f($temp);
             echo '<p> Temperature: '.$temp.'</p>';
