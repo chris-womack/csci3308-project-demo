@@ -46,7 +46,7 @@ if (!empty($_GET['location'])) {
     <title>geogram</title>
 </head>
 <body>
-<form action="" method="GET">
+<form action="" method="get">
     <input type="text" name="location"/>
     <button type="submit">Submit</button>
     <br>
