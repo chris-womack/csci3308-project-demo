@@ -102,7 +102,7 @@
                 <input type="text" name="location"/>
                 <button type="submit">Submit</button>
                 <br>
-                {% if online == false %}
+                {% if instagram_array %}
                     {% for image in instagram_array %}
                         <img src=".$image['images']['low_resolution']['url']" alt=""/>
                     {% endfor %}
