@@ -51,6 +51,7 @@ if (!empty($_GET['location'])) {
     <button type="submit">Submit</button>
     <br>
     <?php
+        echo '<p>'.$weather_array['list'].'</p>';
         if(!empty($weather_array))
         {
             echo '<p>'.$weather_array['list']['main']['temp'].'</p>';
