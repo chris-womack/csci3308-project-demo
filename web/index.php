@@ -103,18 +103,6 @@ if ($_GET['location'])
             {
                 echo "Error: " . $sql . "<br>" . $conn->error;
             }
-
-            $sql = "SELECT * FROM DemoTable";
-            $data = $conn->query($sql);
-            if ($data === FALSE)
-            {
-                echo "Error: " . $sql . "<br>" . $conn->error;
-            }
-            else
-            {
-                echo "$data";
-            }
-
         }
     ?>
 </form>
