@@ -98,7 +98,7 @@ if ($_GET['location'])
             echo '<p> Weather: '.$sky.'</p>';
             echo '<br>';
 
-            $sql = "INSERT INTO DemoTable (id, city, temp, weather) VALUES ('0', '".$temp."', '".$sky."')";
+            $sql = "INSERT INTO DemoTable (id, temp, weather) VALUES ('0', '".$temp."', '".$sky."')";
             if ($conn->query($sql) === FALSE)
             {
                 echo "Error: " . $sql . "<br>" . $conn->error;
