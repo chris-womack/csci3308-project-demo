@@ -14,7 +14,17 @@ if ($_GET['location'])
     $password = $url["pass"];
     $db = substr($url["path"], 1);
 
+    echo "$server";
+    echo "<br>";
+    echo "$username";
+    echo "<br>";
+    echo "$password";
+    echo "<br>";
+    echo "$db";
+    echo "<br>";
+
     $conn = new mysqli("$server", "$username", "$password", "$db");
+
     /**
      * Here we build the url we'll be using to access the google maps api
      * urlencode will encode any invalid characters that users input i.e. whitespace
@@ -84,6 +94,13 @@ if ($_GET['location'])
             echo '<p> Temperature: '.$temp.'</p>';
             echo '<p> Weather: '.$sky.'</p>';
             echo '<br>';
+            /*
+            $sql = "INSERT INTO MyGuests (firstname, lastname, email) VALUES ('John', 'Doe', 'john@example.com')";
+            if ($conn->query($sql) === FALSE)
+            {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+            */
         }
     ?>
 </form>
