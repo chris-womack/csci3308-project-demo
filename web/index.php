@@ -97,13 +97,18 @@ if ($_GET['location'])
             echo '<p> Temperature: '.$temp.'</p>';
             echo '<p> Weather: '.$sky.'</p>';
             echo '<br>';
-            /*
-            $sql = "INSERT INTO MyGuests (firstname, lastname, email) VALUES ('John', 'Doe', 'john@example.com')";
+
+            $sql = "INSERT INTO DemoTable (id, city, temp, weather) VALUES ('0', '".$temp."', '".$sky."')";
             if ($conn->query($sql) === FALSE)
             {
                 echo "Error: " . $sql . "<br>" . $conn->error;
             }
-            */
+
+            $sql = "SELECT * FROM DemoTable";
+            if ($conn->query($sql) === FALSE)
+            {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
         }
     ?>
 </form>
