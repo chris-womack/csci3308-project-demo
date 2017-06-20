@@ -13,6 +13,7 @@ if ($_GET['location'])
     $username = $url["user"];
     $password = $url["pass"];
     $db = substr($url["path"], 1);
+    $port = $url["port"];
 
     echo "$server";
     echo "<br>";
@@ -21,6 +22,8 @@ if ($_GET['location'])
     echo "$password";
     echo "<br>";
     echo "$db";
+    echo "<br>";
+    echo "$port";
     echo "<br>";
 
     $conn = new mysqli("$server", "$username", "$password", "$db");
